@@ -6,24 +6,24 @@ import Paragraph from './Paragraph';
 
 import { items } from '../data';
 
-function Home(props) {
-    return (
-        <>
-            <Intro>
-                <Paragraph>
-                    Fruit emporium sells the finest fruits from this world and beyond.
+const Home = (props) => {
+  return (
+    <>
+      <Intro>
+        <Paragraph>
+          Fruit emporium sells the finest fruits from this world and beyond.
         </Paragraph>
-                <Paragraph>
-                    <strong>Browse items:</strong>
-                </Paragraph>
-            </Intro>
-            <ListingGrid itemList={Object.values(items)} />
-        </>
-    );
-}
+        <Paragraph>
+          <strong>Browse items:</strong>
+        </Paragraph>
+      </Intro>
+      <ListingGrid itemList={Object.values(items)} />
+    </>
+  );
+};
 
 const Intro = styled.div`
-    padding-bottom: 24px;
+  padding-bottom: 24px;
 `;
 
 export default Home;

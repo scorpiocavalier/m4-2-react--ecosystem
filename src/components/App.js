@@ -1,7 +1,7 @@
 import React from 'react';
 
-function App(props) {
+const App = (props) => {
   return 'Hello world!';
-}
+};
 
 export default App;

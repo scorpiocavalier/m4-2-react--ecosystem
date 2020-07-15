@@ -8,30 +8,30 @@ import About from './About';
 import GlobalStyles from './GlobalStyles';
 import ItemDetails from './ItemDetails';
 
-function App() {
-    return (
-        <BrowserRouter>
-            <Wrapper>
-                <Header />
-                <Main>
-                    <Switch>
-                        <Route exact path="/">
-                            <Home />
-                        </Route>
-                        <Route path="/about">
-                            <About />
-                        </Route>
-                        <Route path="/items/:itemId">
-                            <ItemDetails />
-                        </Route>
-                    </Switch>
-                </Main>
-            </Wrapper>
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Wrapper>
+        <Header />
+        <Main>
+          <Switch>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            <Route path='/about'>
+              <About />
+            </Route>
+            <Route path='/items/:itemId'>
+              <ItemDetails />
+            </Route>
+          </Switch>
+        </Main>
+      </Wrapper>
 
-            <GlobalStyles />
-        </BrowserRouter>
-    );
-}
+      <GlobalStyles />
+    </BrowserRouter>
+  );
+};
 
 const Wrapper = styled.div`
   max-width: 800px;

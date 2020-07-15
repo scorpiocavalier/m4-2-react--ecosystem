@@ -1,10 +1,10 @@
 # Workshop: Fruit store
 
-In this workshop, we'll build an online fruit store, with different items being sold, and different sellers.
+In this workshop, we'll build an online fruit store, with different items being sold by different sellers.
 
 ## Setup
 
-Today's lecture introduced two new third-party dependencies: `styled-components` and React Router. Let's install both of them. Run the following command in the project directory:
+Today's lecture introduced two new third-party dependencies: [`styled-components`](https://styled-components.com/) and [`react-router`](https://reactrouter.com/). Let's install both of them. Run the following command in the project directory:
 
 `yarn add styled-components@4.4.1 react-router-dom@5.1.2`
 
@@ -36,7 +36,9 @@ We want to end up with the following routes:
 
 ---
 
-# Exercise 1: Routes + links
+## Exercises
+
+### Exercise 1: Routes + links
 
 In `App.js`, import `BrowserRouter`, `Switch`, and `Route`. Add all the routes listed above, and add some placeholder text as children.
 
@@ -44,8 +46,8 @@ For example:
 
 ```jsx
 <Switch>
-  <Route path="/">Homepage</Route>
-  <Route path="/about">About</Route>
+  <Route path='/'>Homepage</Route>
+  <Route path='/about'>About</Route>
 </Switch>
 ```
 
@@ -65,13 +67,13 @@ You should be able to click the links to update the text on the screen:
 
 ---
 
-# Exercise 2: Render content in homepage and about
+### Exercise 2: Render content in homepage and about
 
 Create two new components, `Home` and `About` and render them for their respective routes:
 
 ```jsx
 <Switch>
-  <Route path="/">
+  <Route path='/'>
     <Homepage />
   </Route>
   {/* same thing for About */}
@@ -142,9 +144,7 @@ Inside `ListingGrid`, we'll want to map over this array, and produce some UI for
 
 > Hint: To arrange things in a grid, you can either give each one a specific width and use `display: inline-block` to stack them side-by-side. You can also use CSS grid, by using `auto-fit` and `minmax`.
 
----
-
-# Exercise 3: Dynamic paths and item details
+### Exercise 3: Dynamic paths and item details
 
 The items in our `ListingGrid` component should link to a new "item details" page:
 
@@ -186,7 +186,11 @@ Here are the requirements:
 
 ---
 
-# Stretch goal 1: Use `NavLink`
+<center>🟡 - Minimally complete workshop (75%) - 🟡</center>
+
+---
+
+### Exercise 4: Use `NavLink`
 
 React router comes with a special variant of Link called NavLink. The difference is that it can tell whether it's linking to the current page.
 
@@ -198,7 +202,11 @@ Use this component to add a little underline + color change for the active link.
 
 ---
 
-# Stretch goal 2: Create "sellers" list and detail pages
+<center>🟢 - Complete workshop (100%) - 🟢</center>
+
+---
+
+### Stretch goal: Create "sellers" list and detail pages
 
 Add a new route at `/sellers`. It should list the available sellers.
 
