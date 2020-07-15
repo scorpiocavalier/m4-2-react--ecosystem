@@ -6,9 +6,7 @@ In this workshop, we'll build an online fruit store, with different items being 
 
 Today's lecture introduced two new third-party dependencies: [`styled-components`](https://styled-components.com/) and [`react-router`](https://reactrouter.com/). Let's install both of them. Run the following command in the project directory:
 
-`yarn add styled-components@4.4.1 react-router-dom@5.1.2`
-
-The `@4.4.1` installs a specific version: this ensures the version you install is compatible with the version used originally in this workshop.
+`yarn add styled-components react-router-dom`
 
 This project has very minimal scaffolding. We have a `data.js` with some items and sellers, and that's pretty much it.
 
