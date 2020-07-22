@@ -2,40 +2,38 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const StyledNav = styled.div`
+const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   padding: 20px;
 `
-const StyledNavList = styled.ul`
-  display: flex;
-  justify-content: space-between;
+
+const Logo = styled.h1`
+  font-weight: 800;
+  font-size: 32px;
 `
 
-const StyledListItems = styled.li`
-  padding: 0 30px;
-  height: 100%;
+const List = styled.ul`
   display: flex;
-  align-items: center;
 `
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
+const HeaderLinks = styled(Link)`
+  font-size: 20px;
 `
 
 const Header = () => {
   return (
-    <StyledNav>
-      <h1>Fruit Emporium</h1>
-      <StyledNavList>
-        <StyledListItems>
-          <StyledLink to="/">Home</StyledLink>
-        </StyledListItems>
-        <StyledListItems>
-          <StyledLink to="/about">About</StyledLink>
-        </StyledListItems>
-      </StyledNavList>
-    </StyledNav>
+    <Nav>
+      <Logo>Fruit Emporium</Logo>
+      <List>
+        <li>
+          <HeaderLinks to="/">Home</HeaderLinks>
+        </li>
+        <li>
+          <HeaderLinks to="/about">About</HeaderLinks>
+        </li>
+      </List>
+    </Nav>
   )
 }
 
