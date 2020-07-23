@@ -5,17 +5,17 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
-  gap: 20px 10px;
+  gap: 30px 30px;
   justify-items: center;
-  padding: 20px;
+  margin: 40px 0;
 `
 
 export default ({ items }) => {
   return (
     <Wrapper>
       {
-        items.map(({ imageSrc, name, latinName }) => {
-          return <Item src={imageSrc} name={name} latinName={latinName} />
+        items.map(({ id, imageSrc, name, latinName }) => {
+          return <Item key={id} id={id} src={imageSrc} name={name} latinName={latinName} />
         })
       }
     </Wrapper>

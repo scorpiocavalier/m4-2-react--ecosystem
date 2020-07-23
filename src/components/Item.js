@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const Wrapper = styled.div`
   display: flex;
@@ -23,10 +24,12 @@ const LatinName = styled.span`
   font-weight: 600;
 `
 
-export default ({ src, name, latinName }) => {
+export default ({ id, src, name, latinName }) => {
   return (
       <Wrapper>
-        <Image src={src} alt={name} />
+        <Link to={`/items/${id}`}>
+          <Image src={src} alt={name} />
+        </Link>
         <Name>{name}</Name>
         <LatinName>{latinName}</LatinName>
       </Wrapper>

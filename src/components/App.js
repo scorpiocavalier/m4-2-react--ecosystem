@@ -1,8 +1,9 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Header from './Header'
-import Home from './Home'
-import About from './About'
+import HomePage from './HomePage'
+import AboutPage from './AboutPage'
+import ItemDetailsPage from './ItemDetailsPage'
 import GlobalStyles from './globalstyles'
 
 const App = props => {
@@ -11,8 +12,9 @@ const App = props => {
       <GlobalStyles />
       <Header />
       <Switch>
-        <Route path="/" exact><Home /></Route>
-        <Route path="/about"><About /></Route>
+        <Route exact path="/"><HomePage /></Route>
+        <Route path="/about"><AboutPage /></Route>
+        <Route path="/items/:itemId"><ItemDetailsPage /></Route>
       </Switch>
     </Router>
   )
