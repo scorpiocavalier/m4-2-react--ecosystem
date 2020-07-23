@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { sellers, items } from '../data'
 import styled from 'styled-components'
 import { BoldText } from './globalstyles'
+import { Link } from 'react-router-dom'
 
 const Wrapper = styled.div`
   display: flex;
@@ -52,6 +53,10 @@ const Button = styled.button`
   font-size: 24px;
   padding: 10px 0;
   margin: 30px 0;
+  background-color: ${({ quantity }) => quantity > 0 ?  "#6600ff" : "gray"};
+  &:hover {
+    background-color: ${({ quantity }) => quantity > 0 ? "#6600ff" : "gray"};
+  }
 `
 
 const ItemInfoGroup = styled.div`
@@ -81,7 +86,7 @@ export default () => {
         <ItemLatinName>{item.latinName}</ItemLatinName>
         <ItemDescription>{item.description}</ItemDescription>
         <ItemOrigin>Product of <BoldText>{item.countryOfOrigin}</BoldText></ItemOrigin>
-        <Button>
+        <Button quantity={item.quantity}>
           {
             item.quantity > 0
               ? `$${item.price} - Buy now`
@@ -90,7 +95,9 @@ export default () => {
         </Button>
         <ItemInfoGroup>
           <ItemSeller src={seller.avatarSrc} alt={seller.id} />
-          <SellerStore>Sold by: <BoldText>{seller.storeName}</BoldText></SellerStore>
+          <Link to={`/sellers/${seller.id}`}>
+            <SellerStore>Sold by: <BoldText>{seller.storeName}</BoldText></SellerStore>
+          </Link>
         </ItemInfoGroup>
       </ItemInfo>
     </Wrapper>

@@ -37,6 +37,9 @@ const Header = () => {
           <HeaderLinks exact to="/" activeClassName="active">Home</HeaderLinks>
         </li>
         <li>
+          <HeaderLinks exact to="/sellers" activeClassName="active">Sellers</HeaderLinks>
+        </li>
+        <li>
           <HeaderLinks to="/about" activeClassName="active">About</HeaderLinks>
         </li>
       </List>
